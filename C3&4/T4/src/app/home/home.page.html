@@ -16,24 +16,21 @@
         <ion-label>What is your gender</ion-label>
       </ion-list-header>
 
-      <ion-row radio-group  [(ngModel)]="something">
+      <ion-row radio-group [(ngModel)]="something">
         <ion-col>
-             <ion-item>
-                <ion-label>Male</ion-label>
-                <ion-radio mode="md" item-left value="A"></ion-radio>
-           </ion-item>
-         </ion-col>
-    
-        <ion-col>
-            <ion-item>
-                <ion-label>Female</ion-label>
-                <ion-radio mode="md" item-left value="B"></ion-radio>
-           </ion-item>
+          <ion-item>
+            <ion-label>Male</ion-label>
+            <ion-radio mode="md" item-left value="A"></ion-radio>
+          </ion-item>
         </ion-col>
-    
 
-    
-    </ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Female</ion-label>
+            <ion-radio mode="md" item-left value="B"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
     </ion-radio-group>
   </ion-list>
 </ion-content>
