@@ -2,13 +2,13 @@
 
 ## How to run this on your machine
 
-Get NodeJS and run the fllowing command in the project directory
+Get NodeJS and run this command in the project directory
 
 ```
 npm install 
 ```
 
-Start the APP in a lab environment with the floowing command
+Start the APP in a lab environment with this command
 
 ```
 ionic serve -l
