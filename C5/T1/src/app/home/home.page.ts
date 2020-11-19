@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AlertController } from "@ionic/angular";
 
 @Component({
   selector: "app-home",
@@ -6,5 +7,15 @@ import { Component } from "@angular/core";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  constructor() {}
+  constructor(public alertCtrl: AlertController) {}
+
+  async showAlert() {
+    const alert = await this.alertCtrl.create({
+      header: "Dialog Box",
+      message: "Display prompt information",
+    });
+    await alert.present();
+    const result = await alert.onDidDismiss();
+    console.log(result);
+  }
 }
