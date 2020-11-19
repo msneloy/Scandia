@@ -1,20 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Task 01 </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-list>
+    <ion-radio-group
+      allow-empty-selection="true"
+      (ionChange)="genderyHandler($event)"
+      (ionSelect)="gogender($event)"
+      (ionBlur)="leavegender($event)"
+    >
+      <ion-list-header>
+        <ion-label>Your gender is : {{gender}}</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio slot="start" value="Male" checked></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio slot="start" value="Female"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
 </ion-content>
