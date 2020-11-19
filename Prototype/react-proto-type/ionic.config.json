@@ -1,7 +1,0 @@
-{
-  "name": "React ProtoType",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
