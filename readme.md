@@ -5,7 +5,7 @@
 Get NodeJS and run this command in the project directory
 
 ```
-npm install 
+npm install
 ```
 
 Start the APP in a lab environment with this command
@@ -13,3 +13,5 @@ Start the APP in a lab environment with this command
 ```
 ionic serve -l
 ```
+
+![Alt text](Prototypes/Angular-Blank/blank.png)
