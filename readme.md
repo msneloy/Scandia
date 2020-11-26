@@ -2,9 +2,17 @@
 
 [![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/0)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/0)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/1)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/1)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/2)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/2)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/3)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/3)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/4)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/4)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/5)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/5)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/6)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/6)[![](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/images/7)](https://sourcerer.io/fame/Sierra007117/Sierra007117/Scandia/links/7)
 
-## How to run this on your machine
+## Framework Installation Procedure
 
-Get NodeJS and run this command in the project directory
+Get NodeJS and run this command to install Ionic framework globally
+
+```
+npm install -g ionic
+```
+
+## Local Installation and Deployment Procedure
+
+Navigate to the task and run this command in the project directory
 
 ```
 npm install
