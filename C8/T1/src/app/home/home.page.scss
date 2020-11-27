@@ -25,3 +25,119 @@
 #container a {
   text-decoration: none;
 }
+$clock-di: 260px;
+.clock {
+  width: $clock-di;
+  height: $clock-di;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  div {
+    position: absolute;
+    transform-origin: 50% 0;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+
+    $radius: 12px;
+    width: $radius;
+    padding-bottom: $radius;
+    background-color: white;
+    border-radius: 50%;
+    top: calc(50% - #{$radius/2});
+    left: calc(50% - #{$radius/2});
+    z-index: 999;
+  }
+
+  @mixin hand($r, $h) {
+    height: $h;
+    top: 50%;
+    left: calc(50% - #{$r});
+    z-index: 1;
+    border-left: $r solid white;
+    border-right: $r solid white;
+    border-radius: 0 0 $r $r;
+  }
+
+  #second-hand {
+    @include hand(1px, 45%);
+  }
+  #minute-hand {
+    @include hand(2px, 40%);
+  }
+  #hour-hand {
+    @include hand(3px, 30%);
+  }
+
+  .ticks span {
+    $h: 12px;
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: $h;
+    background: #444;
+    transform-origin: 50% 0%;
+    left: calc(50% - #{$h/2});
+    top: 50%;
+    @for $i from 1 through 60 {
+      &:nth-child(#{$i}) {
+        transform: rotate(($i/60) * 360deg) translateX($clock-di/2 - $h);
+        // hour marker
+        @if $i % 5 == 0 {
+          background: white;
+        }
+      }
+    }
+  }
+}
+
+@mixin animate-hand($start) {
+  $ratio: $start / 60;
+  $deg: $ratio * 360;
+  $start-deg: $deg - 180 * 1deg;
+  $end-deg: $start-deg + 360;
+  @keyframes animate-hand-#{$start} {
+    from {
+      transform: rotate($start-deg);
+    }
+    to {
+      transform: rotate($end-deg);
+    }
+  }
+}
+@mixin animate-hour-hand($start) {
+  $ratio: $start / 12;
+  $deg: $ratio * 360;
+  $start-deg: $deg - 180 * 1deg;
+  $end-deg: $start-deg + 360;
+  @keyframes animate-hour-hand-#{$start} {
+    from {
+      transform: rotate($start-deg);
+    }
+    to {
+      transform: rotate($end-deg);
+    }
+  }
+}
+
+@for $i from 0 through 59 {
+  @include animate-hand($i);
+  @include animate-hour-hand($i);
+  .sh-#{$i} {
+    animation: animate-hand-#{$i} 60s linear infinite;
+  }
+  .mh-#{$i} {
+    animation: animate-hand-#{$i} 60 * 60s linear infinite;
+  }
+  .hh-#{$i} {
+    animation: animate-hour-hand-#{$i} 60 * 60 * 24s linear infinite;
+  }
+}
+
+body {
+  background: #0f0f0f;
+}
