@@ -16,13 +16,10 @@ Node.js and NPM are the base platforms need to develop the Ionic application. Yo
 
 ## Code Editor
 
-**VS Code** editor is the best code editor to create the Ionic Applications. It is a popular and free text editor made by Microsoft.
-
-There are many other code editors available to create the Ionic application, such as
-
-- Ionic Studio: It is the fastest and easiest way to create Ionic apps.
-- Atom: It is a hackable text editor developed by the GitHub.
-- WebStorm: It is a powerful non-free editor developed by the JetBrains.
+- **VS Code**: It is a popular and free text editor made by Microsoft.
+- **Ionic Studio**: It is the fastest and easiest way to create Ionic apps.
+- **Atom**: It is a hackable text editor developed by the GitHub.
+- **WebStorm**: It is a powerful non-free editor developed by the JetBrains.
 
 ## Ionic CLI
 
